@@ -28,7 +28,7 @@ namespace OnBoarding {
             wrapper.get_style_context ().add_class ("theme");        	
 
 	        // logo
-	        var logo = new Gtk.Image.from_icon_name("cs-themes", IconSize.DIALOG);
+	        var logo = new Gtk.Image.from_icon_name("themetwister", IconSize.DIALOG);
 			logo.get_style_context().add_class ("welcome_logo");
 
 			wrapper.add(logo);
