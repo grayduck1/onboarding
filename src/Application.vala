@@ -79,11 +79,11 @@ public class OnBoardingWindow : Window {
     	this.next.clicked.connect ( () => {
     		this.skip_all_or_previous.label = "Previous";
 
-    		if (this.current_page < 3) {
+    		if (this.current_page < 4) {
 				this.current_page += 1;
     			stack.set_visible_child_name(this.current_page.to_string());
 
-    			if (this.current_page == 3) {
+    			if (this.current_page == 4) {
     				this.next.label = "Get Started";
     			}
     		}
@@ -96,8 +96,9 @@ public class OnBoardingWindow : Window {
 
         // add pages
         stack.add_named(new OnBoarding.Welcome(), "1");
-        stack.add_named(new OnBoarding.Theme(), "2");
-        stack.add_named(new OnBoarding.ReadyToGo(), "3");
+        stack.add_named(new OnBoarding.RpiConfig(), "2");
+        stack.add_named(new OnBoarding.Theme(), "3");
+        stack.add_named(new OnBoarding.ReadyToGo(), "4");
 
 		this.show_all();
     }

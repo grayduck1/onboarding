@@ -41,6 +41,7 @@ executable(
     meson.project_name(),
     'src/Application.vala',
     'src/Page/Welcome.vala',
+    'src/Page/RpiConfig.vala',
     'src/Page/Theme.vala',
     'src/Page/ReadyToGo.vala',
     dependencies: [

@@ -69,6 +69,11 @@
 	font-size: 18px;
 }
 
+/* RpiConfig */
+.onboarding .rpiconfig button.rpiconfig_button {
+	margin: 70px;
+}
+
 /* Theme */
 .onboarding .theme button.theme_button {
 	margin: 70px;
