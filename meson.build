@@ -62,3 +62,8 @@ install_data(
     join_paths('data', 'onboarding.css'),
     install_dir: join_paths(datadir, PROJECT_NAME)
 )
+
+install_data(
+    join_paths('data', 'onboarding_dark.css'),
+    install_dir: join_paths(datadir, PROJECT_NAME)
+)
