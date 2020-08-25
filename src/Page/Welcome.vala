@@ -58,13 +58,13 @@ namespace OnBoarding {
 
 			linkbutton_box.add(basic_guide);
 
-			var community_support = new LinkButton("https://discord.com/channels/670543161525010442/741857430195142668");
+			var community_support = new LinkButton("https://discord.gg/Fh8sjmu");
 			community_support.label = "Community Support...";
 			community_support.set_alignment(0, 0.5f);
 
 			linkbutton_box.add(community_support);
 
-			var get_involved = new LinkButton("https://discord.com/channels/670543161525010442/700827936030195715");
+			var get_involved = new LinkButton("https://discord.gg/Fh8sjmu");
 			get_involved.label = "Get Involved...";
 			get_involved.set_alignment(0, 0.5f);
 

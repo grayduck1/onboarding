@@ -75,18 +75,23 @@
 
 /* RpiConfig */
 .onboarding .rpiconfig button.rpiconfig_button {
-	margin: 70px;
+	margin: 70px 70px 0 70px;
 }
 
-/* Theme */
-.onboarding .theme button.theme_button {
-	margin: 70px;
+/* Update */
+.onboarding .update button.update_button {
+	margin: 70px 70px 0 70px;
 }
 
 /* ReadyToGo */
 .onboarding .readytogo .readytogo_icon {
 	margin: 40px 200px 0 200px;
 	-gtk-icon-transform: scale(2);
+}
+
+/* ReadyToGo */
+.onboarding .readytogo button.readytogo_button {
+	margin: 30px 70px 0 70px;
 }
 
 .onboarding .readytogo .readytogo_description {

@@ -28,7 +28,7 @@ namespace OnBoarding {
             wrapper.get_style_context ().add_class ("readytogo");        	
 
 	        // logo
-	        var logo = new Gtk.Image.from_icon_name("checkmark", IconSize.DIALOG);
+	        var logo = new Gtk.Image.from_icon_name("twisteros", IconSize.DIALOG);
 			logo.get_style_context().add_class ("welcome_logo");
 
 			wrapper.add(logo);
@@ -43,11 +43,22 @@ namespace OnBoarding {
 	        var welcome_description = new Label ("Enjoy using Twister OS! You can always visit\nSystem Settings to set up hardware or\nchange your preferences.");
 			welcome_description.set_line_wrap_mode(Pango.WrapMode.WORD);
 			welcome_description.set_line_wrap(true);
-			welcome_description.set_lines(2);
+			welcome_description.set_lines(3);
 			welcome_description.set_justify(Justification.CENTER);
-			welcome_description.get_style_context ().add_class("readytogo_description");
+			welcome_description.get_style_context ().add_class("welcome_description");
 
 			wrapper.add(welcome_description);
+
+			var button = new Gtk.Button.with_label ("Choose Your Theme...");
+			button.get_style_context().add_class ("readytogo_button");
+			button.clicked.connect (() => {
+		        try {
+		        	GLib.AppInfo info = AppInfo.create_from_commandline("xfce4-terminal --title=ThemeSwitcher --hide-menubar --hide-borders --hide-scrollbar -e \"/usr/share/ThemeSwitcher/ThemeTwister.sh\"", null, AppInfoCreateFlags.SUPPORTS_STARTUP_NOTIFICATION);
+		        	info.launch(null,Gdk.Display.get_default().get_app_launch_context());
+		        } catch (GLib.Error e){warning ("Could not load ThemeSwitcher: %s", e.message);}
+			});
+
+			wrapper.add(button);			
        
             this.add(wrapper);
         }

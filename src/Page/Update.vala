@@ -25,22 +25,22 @@ namespace OnBoarding {
     public class Theme : Gtk.Box {
         public Theme () {
             var wrapper = new Gtk.Box (Gtk.Orientation.VERTICAL, 0);
-            wrapper.get_style_context ().add_class ("theme");        	
+            wrapper.get_style_context ().add_class ("update");        	
 
 	        // logo
-	        var logo = new Gtk.Image.from_icon_name("themetwister", IconSize.DIALOG);
+	        var logo = new Gtk.Image.from_icon_name("raspberry-pi-logo", IconSize.DIALOG);
 			logo.get_style_context().add_class ("welcome_logo");
 
 			wrapper.add(logo);
 
-			var welcome_label = new Label("Choose Your Theme");
+			var welcome_label = new Label("Update Your System");
 			welcome_label.set_property("can-focus", false);
 			
 			welcome_label.get_style_context ().add_class("welcome_label");
 
 			wrapper.add(welcome_label);
 
-	        var welcome_description = new Label ("Twister OS is the successor of Raspbian 95, Raspbian XP,\nRaspbian X, Raspbian X Nighthawk and iRaspbian.");
+	        var welcome_description = new Label ("An updater for Twister OS that automatically\ndownloads, unzips, and runs the latest patch for Twister OS.");
 			welcome_description.set_line_wrap_mode(Pango.WrapMode.WORD);
 			welcome_description.set_line_wrap(true);
 			welcome_description.set_lines(2);
@@ -49,13 +49,13 @@ namespace OnBoarding {
 
 			wrapper.add(welcome_description);
 
-			var button = new Gtk.Button.with_label ("Choose Theme...");
-			button.get_style_context().add_class ("theme_button");
+			var button = new Gtk.Button.with_label ("Update...");
+			button.get_style_context().add_class ("update_button");
 			button.clicked.connect (() => {
 		        try {
-		        	GLib.AppInfo info = AppInfo.create_from_commandline("xfce4-terminal --title=ThemeSwitcher --hide-menubar --hide-borders --hide-scrollbar -e \"/usr/share/ThemeSwitcher/ThemeTwister.sh\"", null, AppInfoCreateFlags.SUPPORTS_STARTUP_NOTIFICATION);
+		        	GLib.AppInfo info = AppInfo.create_from_commandline("xfce4-terminal --title=Patcher --hide-menubar --hide-borders --hide-scrollbar -e \"" + GLib.Environment.get_variable ("HOME") + "/patcher/patch.sh\"", null, AppInfoCreateFlags.SUPPORTS_STARTUP_NOTIFICATION);
 		        	info.launch(null,Gdk.Display.get_default().get_app_launch_context());
-		        } catch (GLib.Error e){warning ("Could not load ThemeSwitcher: %s", e.message);}
+		        } catch (GLib.Error e){warning ("Could not load patcher: %s", e.message);}
 			});
 
 			wrapper.add(button);
