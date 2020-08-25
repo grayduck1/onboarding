@@ -63,6 +63,10 @@
 	margin: 40px 0 0 220px;
 }
 
+.onboarding .welcome .welcome_linkbutton_box button {
+	background: transparent;
+}
+
 .onboarding .welcome button.text-button {
 	margin: 0;
 	padding: 5px 0 5px 0;
