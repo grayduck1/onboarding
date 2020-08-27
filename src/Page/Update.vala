@@ -28,7 +28,7 @@ namespace OnBoarding {
             wrapper.get_style_context ().add_class ("update");        	
 
 	        // logo
-	        var logo = new Gtk.Image.from_icon_name("raspberry-pi-logo", IconSize.DIALOG);
+	        var logo = new Gtk.Image.from_icon_name("twistpatch", IconSize.DIALOG);
 			logo.get_style_context().add_class ("welcome_logo");
 
 			wrapper.add(logo);
