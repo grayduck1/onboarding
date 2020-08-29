@@ -40,10 +40,10 @@ namespace OnBoarding {
 
 			wrapper.add(welcome_label);
 
-	        var welcome_description = new Label ("Continue to set up some useful features. Visit the links\nbelow for more information about Twister OS.");
+	        var welcome_description = new Label ("Continue to set up some useful features.\nVisit the links below for more information about\nTwister OS.");
 			welcome_description.set_line_wrap_mode(Pango.WrapMode.WORD);
 			welcome_description.set_line_wrap(true);
-			welcome_description.set_lines(2);
+			welcome_description.set_lines(3);
 			welcome_description.set_justify(Justification.CENTER);
 			welcome_description.get_style_context ().add_class("welcome_description");
 

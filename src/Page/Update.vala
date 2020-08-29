@@ -40,10 +40,10 @@ namespace OnBoarding {
 
 			wrapper.add(welcome_label);
 
-	        var welcome_description = new Label ("An updater for Twister OS that automatically\ndownloads, unzips, and runs the latest patch for Twister OS.");
+	        var welcome_description = new Label ("An updater for Twister OS that automatically\ndownloads, unzips, and runs the latest patch for\nTwister OS.");
 			welcome_description.set_line_wrap_mode(Pango.WrapMode.WORD);
 			welcome_description.set_line_wrap(true);
-			welcome_description.set_lines(2);
+			welcome_description.set_lines(3);
 			welcome_description.set_justify(Justification.CENTER);
 			welcome_description.get_style_context ().add_class("welcome_description");
 

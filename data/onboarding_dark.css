@@ -64,7 +64,7 @@
 }
 
 .onboarding .welcome .welcome_linkbutton_box {
-	margin: 40px 0 0 220px;
+	margin: 20px 0 0 220px;
 }
 
 .onboarding .welcome .welcome_linkbutton_box button {
@@ -79,12 +79,12 @@
 
 /* RpiConfig */
 .onboarding .rpiconfig button.rpiconfig_button {
-	margin: 70px 70px 0 70px;
+	margin: 50px 70px 0 70px;
 }
 
 /* Update */
 .onboarding .update button.update_button {
-	margin: 70px 70px 0 70px;
+	margin: 50px 70px 0 70px;
 }
 
 /* ReadyToGo */

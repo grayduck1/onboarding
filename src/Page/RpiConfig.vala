@@ -40,7 +40,7 @@ namespace OnBoarding {
 
 			wrapper.add(welcome_label);
 
-	        var welcome_description = new Label ("Launch Raspberry Pi Configuration to set your password,\ntimezone, language preferences,\nWi-Fi country, and enable/disable overscan");
+	        var welcome_description = new Label ("Launch Raspberry Pi Configuration to set your\n password, timezone, language preferences,\nWi-Fi country, and enable/disable overscan.");
 			welcome_description.set_line_wrap_mode(Pango.WrapMode.WORD);
 			welcome_description.set_line_wrap(true);
 			welcome_description.set_lines(3);
