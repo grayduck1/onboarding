@@ -65,10 +65,12 @@
 
 .onboarding .welcome .welcome_linkbutton_box {
 	margin: 20px 0 0 220px;
+	border: 0;
 }
 
 .onboarding .welcome .welcome_linkbutton_box button {
 	background: transparent;
+	border: 0;
 }
 
 .onboarding .welcome button.text-button {
