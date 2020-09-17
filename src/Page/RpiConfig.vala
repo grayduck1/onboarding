@@ -53,7 +53,7 @@ namespace OnBoarding {
 			button.get_style_context().add_class ("rpiconfig_button");
 			button.clicked.connect (() => {
 		        try {
-		        	GLib.AppInfo info = AppInfo.create_from_commandline("xfce4-terminal --title=Config --hide-menubar --hide-borders --hide-scrollbar -e \"rc_gui\"", null, AppInfoCreateFlags.SUPPORTS_STARTUP_NOTIFICATION);
+		        	GLib.AppInfo info = AppInfo.create_from_commandline("xfce4-terminal --title=Config --hide-menubar --hide-borders --hide-scrollbar -e \"env SUDO_ASKPASS=/usr/lib/rc-gui/pwdrcg.sh sudo -AE rc_gui\"", null, AppInfoCreateFlags.SUPPORTS_STARTUP_NOTIFICATION);
 		        	info.launch(null,Gdk.Display.get_default().get_app_launch_context());
 		        } catch (GLib.Error e){warning ("Could not load Config: %s", e.message);}
 			});
