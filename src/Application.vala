@@ -127,13 +127,15 @@ static int main (string[] args) {
 	    Gtk.init (ref args);
 	    Gtk.Application app = new Gtk.Application ("dk.krishenriksen.onboarding", GLib.ApplicationFlags.FLAGS_NONE);
 
-	    // check for light or dark theme
-	    File iraspbian = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.iraspbian-dark.twid");
-	    File nighthawk = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.nighthawk.twid");
+		// check for light or dark theme
+		File iraspbian = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.iraspbian-dark.twid");
+		File nighthawk = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.nighthawk.twid");
+		File twisteros = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.twisteros-dark.twid");
+		File iraspbiansur = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.iraspbiansur-dark.twid");
 
 	    string css_file = Config.PACKAGE_SHAREDIR +
 	        "/" + Config.PROJECT_NAME +
-	        "/" + (iraspbian.query_exists() || nighthawk.query_exists() ? "onboarding_dark.css" : "onboarding.css");
+	        "/" + (iraspbian.query_exists() || nighthawk.query_exists() || twisteros.query_exists() || iraspbiansur.query_exists() ? "onboarding_dark.css" : "onboarding.css");
 	    var css_provider = new Gtk.CssProvider ();
 
 	    try {
