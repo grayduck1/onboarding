@@ -132,10 +132,12 @@ static int main (string[] args) {
 		File nighthawk = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.nighthawk.twid");
 		File twisteros = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.twisteros-dark.twid");
 		File iraspbiansur = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.iraspbiansur-dark.twid");
+		File twister11 = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.twister11-dark.twid");
+		File twisterplasma = File.new_for_path (GLib.Environment.get_variable ("HOME") + "/.twisterplasma-dark.twid");
 
 	    string css_file = Config.PACKAGE_SHAREDIR +
 	        "/" + Config.PROJECT_NAME +
-	        "/" + (iraspbian.query_exists() || nighthawk.query_exists() || twisteros.query_exists() || iraspbiansur.query_exists() ? "onboarding_dark.css" : "onboarding.css");
+	        "/" + (iraspbian.query_exists() || nighthawk.query_exists() || twisteros.query_exists() || iraspbiansur.query_exists() || twister11.query_exists() || twisterplasma.query_exists() ? "onboarding_dark.css" : "onboarding.css");
 	    var css_provider = new Gtk.CssProvider ();
 
 	    try {
